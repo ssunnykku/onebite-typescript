@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    //  해당 버전으로 컴파일
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "dist",
+    "strict": false,
+    //ts-node src/index.ts 실행시 SyntaxError: Unexpected token 'export'에러가 난다면 pacage.json에   "type": "module" 설정이 되어있는지 확인
+    "moduleDetection": "force"
+  },
+  // Unknown file extension ".ts"에러시 설정
+  "ts-node": {
+    "esm": true
+  },
+  // 배열 안 경로 아래에 있는 모든 파일을 포함해 컴파일해라
+  "include": ["src"]
+}
